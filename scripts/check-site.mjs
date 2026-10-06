@@ -22,8 +22,10 @@ if (missing.length) {
 const required = [
   'meta name="description"',
   'meta property="og:title"',
+  'meta property="og:url"',
   'meta property="og:image"',
   'meta name="twitter:card"',
+  'link rel="canonical"',
   'link rel="manifest"',
 ];
 const missingMetadata = required.filter((value) => !index.includes(value));
@@ -33,4 +35,3 @@ if (missingMetadata.length) {
 }
 
 console.log(`Validated ${references.size} local references and ${required.length} metadata requirements.`);
-
